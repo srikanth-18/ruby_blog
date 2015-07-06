@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Professors </title>
+</head>
+<body id="professors">
+
+
+<%= stylesheet_link_tag    'professor_style' %>
+
+<div class="container">	
+<% all_admin_users.each do |user| %>
+
+	<div class="col-sm-6"><img src=<%= user.image %>  class="img-circle" width = "338px" height="340px" />
+    <h2> <%= link_to user.name , user_challenges_path(user.id), {:class => "css_class"}%> </h2>
+<blockquote>
+    <p class="lead" > <%= user.detail %></p>
+    </blockquote>
+    </div>
+  <% end %>
+  
+</div>
+</body>
+</html>
+

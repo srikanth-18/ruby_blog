@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HackerRankBlog</title>
+  <%= stylesheet_link_tag    'application' %>
+  <%= stylesheet_link_tag    'boot' %>
+  <%= stylesheet_link_tag    'bootstrap-arrows' %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'customejsfile', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'bootstrap-arrows', 'data-turbolinks-track' => true %>
+
+<script>$('.arrow, [class^=arrow-]').bootstrapArrows();</script>
+
+  <%= csrf_meta_tags %>
+</head>
+<%= yield(:search) %>
+
+<body>
+
+<% content_for :search do %>
+<%= search_form_for(@search,url: challenges_path)  do |f| %>
+<%= f.text_field :title_cont %>
+<%= f.submit "search" %>
+<% end %>
+<% end %>
+
+<div class="navbar navbar-default">
+ 
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    
+    <div class="navbar-header">
+
+      <a class="navbar-brand"> <img src="/images/daiict.jpeg" height="100px" width="100px"></a>
+      <h2 class="navbar-brand">PROGRAMMING CLUB</h2>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a  href="http://localhost:3000/home" >HOME</a></li>
+      <li><a href="http://localhost:3000/contests">CONTESTS</a></li>
+      <li><a href="http://localhost:3000/professors">PROFESSORS</a></li>
+      <li><a href="http://localhost:3000/challenges">BLOG</a></li>
+        <li><a href="http://localhost:3000/about">ABOUT</a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</div>
+
+<% flash.each do |key,value| %>
+<p> <%=  value %></p>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

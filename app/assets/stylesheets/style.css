@@ -1,0 +1,33 @@
+.row .col-sm-6 .thumbnail .caption .css_class{
+	color:#ffffff; 
+	background-color:#2C3E50; 
+}
+
+.row .col-sm-6 .thumbnail .caption .css_class:hover,
+.row .col-sm-6 .thumbnail .caption .css_class:focus{
+	color:#18BC9C; 
+	background-color: transparent; 
+}
+
+.css_class:hover,
+.css_class:focus{
+color:#18BC9C; 
+	background-color: transparent; 	
+}
+
+.container .container .thumbnail .caption .col-sm-6 .button:hover,
+.container .container .thumbnail .caption .col-sm-6 .button:focus{
+color:#18BC9C; 
+	background-color: transparent; 		
+};
+
+.container .container .thumbnail .caption .col-sm-6 .btn-primary:hover,
+.container .container .thumbnail .caption .col-sm-6 .btn-primary:focus {
+    color: #fff;
+    background-color: #00b3db;
+    border-color: #285e8e; /*set the color you want here*/
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}

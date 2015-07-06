@@ -1,0 +1,74 @@
+<%= stylesheet_link_tag    'style_show' %>
+<div class="container">
+<h1> <%= @challenge.title %> </h1>
+<p class="lead"> <%= @challenge.body %> </p>
+<h4>Input Format: <%= @challenge.input_format %> </h4>
+<h4>Output Format: <%= @challenge.output_format %> </h4>
+<h4>Constarints:  <%= @challenge.constraints %> </h4>
+<h4 style="color:#18BC9C"> SubDomain : <%= @challenge.subdomain.name %> </h4>
+<br />
+<br />
+<h3>Enter Your Code here</h3>
+
+
+<form action="http://localhost/practise.php" method="POST">
+	
+		<textarea id="Code" rows="10" cols="50" name ="mycode" > </textarea>
+		<br />
+		<button type="submit" class="btn btn-success" style="margin-left: 750px;margin-top:20px;" >Compile and Run</button>
+	</form>
+
+<!--<h2> Code Testor</h2>-->
+<%#<%= form_tag({action: :show}, {method: :get}) do %>
+  
+<%#Comment: <%= text_area_tag(:comment, nil, :rows => 5, :cols => 15) %>
+  <%#<%= submit_tag ("Save data") %>
+<%#<% end %>
+
+<%#<%  if @code_from_form != nil %>
+<%#<p>
+	<%#<%= simple_format @code_from_form %>
+<%#</p>
+
+
+<%#<% end %>
+
+
+<%#<%  if @output!= nil %>
+<%#<p>
+	<%= @output %>
+<%#</p>
+
+<% end %>
+
+
+
+	
+
+<h2 style="color: orange;">Comments</h2>
+<% @comments.each do |comment| %>
+  
+    <div class="thumbnail" >
+     	 <div class="caption">
+
+    	<h3 style="color:#18BC9C"><%= comment.name %> </h3>
+    
+    	<p class="lead"><%= comment.body %></p>
+    	<small class="pull-right"> <%= comment.email %></small>
+  		</div>
+  	</div>
+<% end %>
+
+		
+		<a href="http://localhost:3000/admin/login" class="btn btn-primary">Suggest Edits</a>
+<%= render 'comments/form' %>
+
+
+<%= link_to "Back to Challenges",challenges_path %>
+
+
+</div>
+<%#<%= link_to "Edit challenge",edit_challenge_path %>
+
+<%#<%= link_to "Delete challenge",@challenge,:method => :delete %>
+

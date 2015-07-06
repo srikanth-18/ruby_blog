@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    
+  </title>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  </style>
+  <%= javascript_include_tag 'bootstrap-arrows', 'data-turbolinks-track' => true %>  
+<%= stylesheet_link_tag    'bootstrap-arrows' %>
+<%= stylesheet_link_tag    'button' %>
+
+
+<script>$('.arrow, [class^=arrow-]').bootstrapArrows();</script>
+</head>
+<body id="home">
+<div class="container">
+  <br>
+  <div id="myCarousel" class=" pull-left carousel slide" style="width: 950px; padding-right: -100px; margin: 0 auto" data-ride="carousel">
+    
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="/images/lab4.jpg" alt="Chania" width="500" height="375">
+         <div class="carousel-caption">
+        <h3>Lab building</h3>
+        <p> Entrance for great future</p>
+      </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/lab5.jpg" alt="Chania" width="500" height="375">
+        <div class="carousel-caption">
+        <h3>Lotus</h3>
+        <p> Beauty of nature</p>
+      </div>
+      </div>
+    
+      <div class="item">
+        <img src="/images/lab6.jpg" alt="Flower" width="500" height="375">
+        <div class="carousel-caption">
+        <h3>Resource Centre</h3>
+        <p> A Temple of Books</p>
+      </div>
+      </div>
+
+    </div>
+
+    
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!--<a href="http://localhost:3000/admin/login" class="btn pull-right btn-primary btn-xlarge" style="color:#ffffff;">Login</a>-->
+
+<div class="button pull-right" style="margin-right:50px;"><div class="outer"><div class="height"><div class="inner">
+<a href="http://localhost:3000/admin/login" >Login</a>
+</div>
+</div>
+</div>
+<h4>Click here to Login</h4>  
+</div>
+
+
+
+
+    
+<div class="guide" style="margin-top:400px;">
+      <h2>Guidelines for Programming Contests</h2>
+      <p class="text-warning">
+      1. FPC is an individual event. Restricted to the first year undergraduate students only.</p>
+      <p class="text-primary">
+2. WPC is a team event. Teams of upto 3 members can participate. However only one person needs to register on the judge and submissions should be from the same account.</p>
+<p class="text-primary">
+3. A single person cannot register by multiple names.
+</p>
+<p class="text-danger">
+4.Copying of code from other contestants is strictly not allowed.Appropriate action will be taken in such cases. The decision of the co-ordinators will be final in this regard.
+</p>
+<p class="text-success">
+5.Right now we have support only for C.
+</p>
+<p class="text-warning">
+6.If you have problem understanding a particular question,please post it as comment on that problem
+</p>
+</div>
+
+</body>
+</html>

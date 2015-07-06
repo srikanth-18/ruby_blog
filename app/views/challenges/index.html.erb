@@ -1,0 +1,47 @@
+<%#<% content_for :search do %>
+<%#<%= search_form_for(@search,url: challenges_path)  do |f| %>
+<%#<%= f.text_field :title_cont %>
+<%#<%= f.submit "search" %>
+<%#<% end %>
+<%#<% end %>
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+   <%= stylesheet_link_tag    'boot' %>
+<%= stylesheet_link_tag    'style' %>
+
+</head>
+
+
+<body id="blog">
+<% if(@search_challenges) %>
+<h1> Search Results </h1>
+<% @search_challenges.each do |challenge| %>
+ <h3> <%= link_to challenge.title , challenge %> </h3>
+<h4> SubDomain: <%= challenge.subdomain.name %> </h4>
+<% end %>
+<% else %>
+
+<div class="row">
+ <% all_subdomains.each do |subdomain| %>
+   
+   <div class="col-sm-6 col-md-3">
+           
+      <div class="thumbnail" style="background-color:#2C3E50; border-radius:50px;margin-left:20px; margin-right:20px;">
+      <div class="caption">
+      
+         <h2 style="margin-top:50px;margin-left:20px;margin-right:20px;margin-bottom:50px;"><%= link_to subdomain.name,subdomain, {:style=>'' ,:class => "css_class"} %></h2>
+         
+      </div>
+      </div>
+      
+   </div>
+   
+   <% end %>
+  
+<% end %>
+<%#<%= link_to "Create new challenge",new_challenge_path %>
+</body>
+</html>
+

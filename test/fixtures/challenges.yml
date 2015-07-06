@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  body: MyText
+  input_format: MyText
+  output_format: MyText
+  constraints: MyText
+  subdomain_id: 1
+  author_id: 1
+
+two:
+  title: MyString
+  body: MyText
+  input_format: MyText
+  output_format: MyText
+  constraints: MyText
+  subdomain_id: 1
+  author_id: 1

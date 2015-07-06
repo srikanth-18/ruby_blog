@@ -1,0 +1,42 @@
+<h1> Edit Challenge </h1>
+<%= form_for @challenge do |f| %>
+	<p> 
+	<%= f.label :title %> <br />
+	<%= f.text_field :title %> <br />
+	</p>
+
+	<p> 
+	<%= f.label :body %> <br />
+	<%= f.text_area :body %> <br />
+	</p>
+
+
+	<p> 
+	<%= f.label :input_format %> <br />
+	<%= f.text_area :input_format %> <br />
+	</p>
+
+	<p> 
+	<%= f.label :input_format %> <br />
+	<%= f.text_area :input_format %> <br />
+	</p>
+
+	<p> 
+	<%= f.label :output_format %> <br />
+	<%= f.text_area :output_format %> <br />
+	</p>
+
+
+	<p> 
+	<%= f.label :constraints %> <br />
+	<%= f.text_area :constraints %> <br />
+	</p>
+
+ <%= f.select :subdomain_id, Subdomain.all.collect {|x| [x.name,x.id]},{:include_blank => "Select One"} %> <br />
+
+<p>
+	<%= f.submit "Update post" %>
+
+</p>
+<%= link_to "Back to challenges" , challenge_path %>
+	<% end %>
