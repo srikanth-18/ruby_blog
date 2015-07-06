@@ -1,0 +1,7 @@
+.container .col-sm-6 .css_class:hover,
+.container .col-sm-6 .css_class:focus{
+
+	color: #18BC9C;
+	background-color: transparent;
+
+}

@@ -1,0 +1,6 @@
+.container > a,
+.container > a:hover,
+.container > a:focus{
+	color: #FFFFFF;
+	
+}

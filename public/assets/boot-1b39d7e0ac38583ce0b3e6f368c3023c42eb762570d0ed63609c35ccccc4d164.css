@@ -1,0 +1,89 @@
+.navbar-default {
+background-color: #2C3E50;
+border-color: #FFFFFF;
+color: #FFFFFF;
+
+}
+.navbar-default .navbar-brand {
+	color: #FFFFFF;
+
+}
+
+.navbar-default .navbar-nav >li >a {
+
+	color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus{
+	color: #FFFFFF;
+	background-color: #1A242F;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus{
+	color: #18BC9C;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus{
+	background-color: #1A242F;
+	color: #FFFFFF;
+}
+
+
+
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: #18BC9C;
+	background-color: transparent;
+}
+
+
+.navbar-default .container-fluid .navbar-header {
+	height: 120px;
+}
+
+.navbar-default .container-fluid .navbar-header h2 {
+	margin-top: 50px;
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: 36px;
+}
+
+.navbar-default .container-fluid .navbar-collapse a {
+	margin-top: 50px;
+	margin-right: 10px;
+
+}
+
+.container {
+height: 150px;
+
+}
+
+.guide{
+	margin-top: 250px;
+	margin-left: 165px; 
+}
+
+.btn-xlarge {
+    padding: 18px 28px;
+    margin-right: 50px;
+
+    font-size: 28px;
+    line-height: normal;
+    border-radius: 8px;
+    }
+.arrow-primary {
+
+	margin-left: 125px;
+
+}
+.move-left h3{
+	margin-left: 1075px;
+}
